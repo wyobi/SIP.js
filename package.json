@@ -65,6 +65,8 @@
     "node": ">=10.0"
   },
   "scripts": {
+    "build": "webpack --config build/webpack.config.cjs --mode production",
+    "prepare": "npm run build",
     "prebuild": "npm run lint",
     "build-bundles": "npm run build-reg-bundle && npm run build-min-bundle && npm run copy-dist-files",
     "build-reg-bundle": "webpack --progress --config build/webpack.config.cjs --env buildType=reg",
@@ -72,7 +74,6 @@
     "build-demo": "npm run build && webpack --progress --config demo/webpack.config.cjs",
     "build-lib": "tsc -p src",
     "build-test": "tsc -p test",
-    "build": "npm run generate-grammar && npm run build-lib",
     "build-and-test": "npm run build && npm run test",
     "build-and-test-browser": "npm run build && npm run test-browser",
     "build-docs-api": "npm run extract-api && npm run document-api && npm run document-copy-api",
