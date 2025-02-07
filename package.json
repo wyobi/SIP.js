@@ -6,7 +6,9 @@
   "license": "MIT",
   "main": "./lib/index.js",
   "files": [
-    "/lib"
+    "/lib",
+    "/dist",
+    "/demo"
   ],
   "module": "./lib/index.js",
   "sideEffects": false,
