@@ -16,11 +16,11 @@ const holdCheckbox = getInput("hold");
 const muteCheckbox = getInput("mute");
 
 // WebSocket Server URL
-const webSocketServer = "wss://edge.sip.onsip.com";
+const webSocketServer = "ws://jhb1.vphone.co.za";
 serverSpan.innerHTML = webSocketServer;
 
 // Destination URI
-const target = "sip:echo@sipjs.onsip.com";
+const target = "sip:echo@jhb1.vphone.co.za";
 targetSpan.innerHTML = target;
 
 // Name for demo user
@@ -154,7 +154,7 @@ keypad.forEach((button) => {
   });
 });
 
-// Keypad helper function
+// Keypad helper function` gb
 const keypadDisabled = (disabled: boolean): void => {
   keypad.forEach((button) => (button.disabled = disabled));
   dtmfSpan.innerHTML = "";
